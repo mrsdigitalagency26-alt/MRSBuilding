@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MRS Building Care — Renovations & General Contractor (Halle / Buizingen)</title>
-  <meta name="description" content="MRS Building Care — Entreprise générale / Algemene aannemer / General contractor in Halle (Buizingen). Roofing, electricity, tiling, plastering, facade & more." />
+  <title>MRS Building — Renovations & General Contractor (Halle / Buizingen)</title>
+  <meta name="description" content="MRS Building — Entreprise générale / Algemene aannemer / General contractor in Halle (Buizingen). Roofing, electricity, tiling, plastering, facade & more." />
 
   <!-- Simple SVG favicon (inline) -->
   <link rel="icon" type="image/svg+xml"
@@ -55,7 +55,7 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.2px;
+      font-weight:900; letter-spacing:.2px;
     }
 
     /* LOGO (SVG) */
@@ -67,6 +67,7 @@
       box-shadow: 0 10px 30px rgba(124,219,255,.12);
       display:grid; place-items:center;
       overflow:hidden;
+      flex: 0 0 auto;
     }
     .logoSvg{width:34px; height:34px}
 
@@ -76,6 +77,7 @@
       border-radius:12px;
       color:var(--muted);
       border:1px solid transparent;
+      font-weight:800;
     }
     .nav-links a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.04)}
     .right{
@@ -93,16 +95,17 @@
       border-radius:11px;
       background:transparent;
       color:var(--muted);
-      font-weight:700;
+      font-weight:800;
     }
     .lang button.active{background:rgba(124,219,255,.14); color:var(--text)}
     .cta{
       padding:10px 14px;
       border-radius:14px;
-      font-weight:800;
+      font-weight:900;
       border:1px solid rgba(124,219,255,.35);
       background: linear-gradient(135deg, rgba(124,219,255,.22), rgba(183,255,207,.12));
       box-shadow: 0 14px 35px rgba(0,0,0,.25);
+      white-space:nowrap;
     }
     .cta:hover{transform: translateY(-1px)}
     .hero{padding:56px 0 28px}
@@ -130,7 +133,7 @@
       border:1px solid var(--line);
       color:var(--muted);
       background: rgba(255,255,255,.03);
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
     }
     .dot{
@@ -153,7 +156,7 @@
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
       color:var(--text);
-      font-weight:800;
+      font-weight:900;
     }
     .btn.primary{
       border-color: rgba(124,219,255,.35);
@@ -172,6 +175,7 @@
     }
     .tile strong{display:block; font-size:14px}
     .tile span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
+
     section{padding:18px 0}
     .section-head{
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
@@ -179,12 +183,13 @@
     }
     .section-head h2{margin:0; font-size:22px; letter-spacing:-.3px}
     .section-head p{margin:0; color:var(--muted); max-width:60ch}
+
     .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
     @media (max-width: 900px){ .grid3{grid-template-columns:1fr} }
     .service{padding:16px}
     .badge{
       display:inline-flex; align-items:center; gap:8px;
-      font-weight:800;
+      font-weight:900;
       font-size:13px;
       padding:7px 10px;
       border-radius:999px;
@@ -194,6 +199,7 @@
       margin-bottom:10px;
     }
     .service p{margin:8px 0 0; color:var(--muted)}
+
     .split{
       display:grid; grid-template-columns: 1fr 1fr; gap:14px;
     }
@@ -210,6 +216,46 @@
       color:var(--muted);
     }
     .list b{color:var(--text)}
+
+    /* Projects */
+    .projects-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 900px){ .projects-grid{grid-template-columns:1fr} }
+    .project{
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      min-height: 240px;
+    }
+    .project .thumb{
+      height: 150px;
+      background:
+        radial-gradient(600px 200px at 20% 20%, rgba(124,219,255,.20), transparent 60%),
+        radial-gradient(500px 180px at 80% 30%, rgba(183,255,207,.16), transparent 60%),
+        rgba(255,255,255,.03);
+      display:grid;
+      place-items:center;
+      color: rgba(233,240,255,.85);
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+    .project img{
+      width:100%;
+      height: 150px;
+      object-fit: cover;
+      display:block;
+    }
+    .project .body{padding:14px}
+    .project .title{font-weight:900; margin:0 0 6px}
+    .project .meta{margin:0; color:var(--muted); font-size:13px}
+
     .contact{
       padding:18px;
       display:grid; gap:12px;
@@ -222,7 +268,7 @@
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
       color:var(--muted);
-      font-weight:700;
+      font-weight:800;
     }
     .pill a{color:var(--text)}
     .map{
@@ -287,7 +333,7 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="MRS Building Care">
+      <a class="brand" href="#top" aria-label="MRS Building">
         <div class="logoWrap" aria-hidden="true">
           <!-- Simple logo: house outline + MRS -->
           <svg class="logoSvg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -308,7 +354,7 @@
         </div>
 
         <div>
-          <div style="font-size:14px; line-height:1.05;">MRS Building Care</div>
+          <div style="font-size:14px; line-height:1.05;">MRS Building</div>
           <div class="small muted" data-i18n="nav_tagline">Renovations • General Contractor • Halle (Buizingen)</div>
         </div>
       </a>
@@ -316,6 +362,7 @@
       <nav class="nav-links">
         <a href="#services" data-i18n="nav_services">Services</a>
         <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#process" data-i18n="nav_process">How we work</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -339,7 +386,7 @@
 
           <h1 data-i18n="hero_title">Your one-stop team for renovations — from A to Z.</h1>
           <p class="lead" data-i18n="hero_lead">
-            MRS Building Care is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu.
+            MRS Building is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu.
             We handle complete renovation projects: roofing, electrical work, tiling, plastering, facade work and more.
           </p>
 
@@ -348,7 +395,7 @@
             <a class="btn" href="tel:+32489202801" aria-label="Call">
               <span>📞</span> <span data-i18n="hero_btn_call">Call now</span>
             </a>
-            <a class="btn" href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care" aria-label="Email">
+            <a class="btn" href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building" aria-label="Email">
               <span>✉️</span> <span data-i18n="hero_btn_email">Email for a quote</span>
             </a>
           </div>
@@ -415,7 +462,7 @@
     <section id="about">
       <div class="section-head">
         <div>
-          <h2 data-i18n="about_title">About MRS Building Care</h2>
+          <h2 data-i18n="about_title">About MRS Building</h2>
           <p data-i18n="about_sub">Family business, serious work, clean communication.</p>
         </div>
       </div>
@@ -423,7 +470,7 @@
       <div class="split">
         <div class="card" style="padding:18px;">
           <p class="muted" style="margin:0" data-i18n="about_text">
-            MRS Building Care is a family-owned renovation company based in Halle (Buizingen).
+            MRS Building is a family-owned renovation company based in Halle (Buizingen).
             CEO Marcus Radu and Florin Radu manage projects with a focus on quality, reliability, and transparent pricing.
             Whether it’s a small repair or a complete renovation, you get one point of contact and a result that looks right.
           </p>
@@ -444,6 +491,51 @@
             <li><b data-i18n="why_4">One team, one contact</b> — <span data-i18n="why_4t">simple communication</span></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="projects_title">Projects</h2>
+          <p data-i18n="projects_sub">A few examples of our work. Photos will be added soon.</p>
+        </div>
+      </div>
+
+      <!--
+        HOW TO ADD YOUR PHOTOS LATER:
+        1) Put images in the same folder as index.html, for example:
+           /projects/roof-1.jpg  (if you create a projects folder)
+        2) Replace the placeholder <div class="thumb">... with <img src="YOURFILE.jpg" alt="...">
+           Examples are already included below (commented).
+      -->
+      <div class="projects-grid">
+        <article class="project">
+          <div class="thumb" data-i18n="proj_ph_1">PHOTO COMING SOON</div>
+          <!-- <img src="projects/roof-1.jpg" alt="Roofing project in Halle" /> -->
+          <div class="body">
+            <p class="title" data-i18n="proj_t1">Roofing / Toiture</p>
+            <p class="meta" data-i18n="proj_m1">Repairs & finishing details — clean results.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="thumb" data-i18n="proj_ph_2">PHOTO COMING SOON</div>
+          <!-- <img src="projects/tiling-1.jpg" alt="Tiling project in Buizingen" /> -->
+          <div class="body">
+            <p class="title" data-i18n="proj_t2">Tiling / Carrelage</p>
+            <p class="meta" data-i18n="proj_m2">Precise alignment, clean joints, durable finish.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="thumb" data-i18n="proj_ph_3">PHOTO COMING SOON</div>
+          <!-- <img src="projects/facade-1.jpg" alt="Facade renovation" /> -->
+          <div class="body">
+            <p class="title" data-i18n="proj_t3">Facade / Façade</p>
+            <p class="meta" data-i18n="proj_m3">Renovation & repairs for a refreshed exterior.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -483,7 +575,7 @@
         <div class="row">
           <div class="pill">📍 <span data-i18n="contact_addr">Beerselsestraat 3, 1501 Buizingen (Halle), Belgium</span></div>
           <div class="pill">📞 <a href="tel:+32489202801">0489 20 28 01</a></div>
-          <div class="pill">✉️ <a href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care">sebimarcus06@gmail.com</a></div>
+          <div class="pill">✉️ <a href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building">sebimarcus06@gmail.com</a></div>
           <div class="pill">🗺️ <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=Beerselsestraat%203%201501%20Buizingen">Open in Maps</a></div>
         </div>
 
@@ -497,7 +589,7 @@
 
         <div class="row" style="gap:12px;">
           <a class="btn primary"
-             href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care&body=Hello%20MRS%20Building%20Care,%0A%0AI%20would%20like%20a%20quote%20for:%0A-%20Type%20of%20work:%20%0A-%20Address:%20%0A-%20Preferred%20date:%20%0A-%20Photos%20(optional):%20%0A%0AThank%20you!"
+             href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building&body=Hello%20MRS%20Building,%0A%0AI%20would%20like%20a%20quote%20for:%0A-%20Type%20of%20work:%20%0A-%20Address:%20%0A-%20Preferred%20date:%20%0A-%20Photos%20(optional):%20%0A%0AThank%20you!"
              data-i18n="contact_btn_quote">Request a quote by email</a>
 
           <a class="btn" href="tel:+32489202801" data-i18n="contact_btn_call">Call us</a>
@@ -513,7 +605,7 @@
       <div class="container">
         <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
           <div>
-            <div style="font-weight:900;">MRS Building Care</div>
+            <div style="font-weight:900;">MRS Building</div>
             <div class="small" data-i18n="footer_line">
               General contractor • Renovations • Halle (Buizingen)
             </div>
@@ -527,14 +619,14 @@
           </div>
         </div>
         <div class="hr"></div>
-        <div class="small muted">© <span id="year"></span> MRS Building Care. <span data-i18n="footer_rights">All rights reserved.</span></div>
+        <div class="small muted">© <span id="year"></span> MRS Building. <span data-i18n="footer_rights">All rights reserved.</span></div>
       </div>
     </footer>
   </main>
 
   <!-- WhatsApp floating button -->
   <a class="whatsapp-float"
-     href="https://wa.me/32489202801?text=Hello%20MRS%20Building%20Care,%20I%20would%20like%20a%20quote.%0A%0AAddress:%20%0AWork%20type:%20%0APreferred%20date:%20"
+     href="https://wa.me/32489202801?text=Hello%20MRS%20Building,%20I%20would%20like%20a%20quote.%0A%0AAddress:%20%0AWork%20type:%20%0APreferred%20date:%20"
      target="_blank" rel="noopener"
      aria-label="Chat on WhatsApp">
     <span class="wa-ic" aria-hidden="true">💬</span>
@@ -550,6 +642,7 @@
         nav_tagline: "Renovations • General Contractor • Halle (Buizingen)",
         nav_services: "Services",
         nav_about: "About",
+        nav_projects: "Projects",
         nav_process: "How we work",
         nav_contact: "Contact",
         nav_quote: "Request a quote",
@@ -557,7 +650,7 @@
         hero_kicker: "Family business in Halle (Buizingen) • Reliable, clean finishes",
         hero_title: "Your one-stop team for renovations — from A to Z.",
         hero_lead:
-          "MRS Building Care is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu. We handle complete renovation projects: roofing, electrical work, tiling, plastering, facade work and more.",
+          "MRS Building is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu. We handle complete renovation projects: roofing, electrical work, tiling, plastering, facade work and more.",
         hero_btn_quote: "Get a free quote",
         hero_btn_call: "Call now",
         hero_btn_email: "Email for a quote",
@@ -584,10 +677,10 @@
         s6_title: "Facade (Façade)",
         s6_text: "Facade renovation, repairs & finishing — a clean exterior look.",
 
-        about_title: "About MRS Building Care",
+        about_title: "About MRS Building",
         about_sub: "Family business, serious work, clean communication.",
         about_text:
-          "MRS Building Care is a family-owned renovation company based in Halle (Buizingen). CEO Marcus Radu and Florin Radu manage projects with a focus on quality, reliability, and transparent pricing. Whether it’s a small repair or a complete renovation, you get one point of contact and a result that looks right.",
+          "MRS Building is a family-owned renovation company based in Halle (Buizingen). CEO Marcus Radu and Florin Radu manage projects with a focus on quality, reliability, and transparent pricing. Whether it’s a small repair or a complete renovation, you get one point of contact and a result that looks right.",
         about_b1: "A to Z renovations",
         about_b1t: "we coordinate the full project",
         about_b2: "Clear planning",
@@ -604,6 +697,18 @@
         why_3t: "no surprises",
         why_4: "One team, one contact",
         why_4t: "simple communication",
+
+        projects_title: "Projects",
+        projects_sub: "A few examples of our work. Photos will be added soon.",
+        proj_ph_1: "PHOTO COMING SOON",
+        proj_ph_2: "PHOTO COMING SOON",
+        proj_ph_3: "PHOTO COMING SOON",
+        proj_t1: "Roofing / Toiture",
+        proj_m1: "Repairs & finishing details — clean results.",
+        proj_t2: "Tiling / Carrelage",
+        proj_m2: "Precise alignment, clean joints, durable finish.",
+        proj_t3: "Facade / Façade",
+        proj_m3: "Renovation & repairs for a refreshed exterior.",
 
         process_title: "How we work",
         process_sub: "Simple steps, smooth projects.",
@@ -633,6 +738,7 @@
         nav_tagline: "Rénovations • Entreprise générale • Halle (Buizingen)",
         nav_services: "Services",
         nav_about: "À propos",
+        nav_projects: "Réalisations",
         nav_process: "Méthode",
         nav_contact: "Contact",
         nav_quote: "Demander un devis",
@@ -640,7 +746,7 @@
         hero_kicker: "Entreprise familiale à Halle (Buizingen) • Finitions propres et fiables",
         hero_title: "Votre équipe rénovation — de A à Z.",
         hero_lead:
-          "MRS Building Care est une entreprise familiale (entreprise générale) dirigée par Marcus Radu (CEO) avec Florin Radu. Nous réalisons des rénovations complètes : toiture, électricité, carrelage, plâtre, façade et plus.",
+          "MRS Building est une entreprise familiale (entreprise générale) dirigée par Marcus Radu (CEO) avec Florin Radu. Nous réalisons des rénovations complètes : toiture, électricité, carrelage, plâtre, façade et plus.",
         hero_btn_quote: "Devis gratuit",
         hero_btn_call: "Appeler",
         hero_btn_email: "Email pour devis",
@@ -667,10 +773,10 @@
         s6_title: "Façade",
         s6_text: "Rénovation, réparations et finitions — un extérieur net.",
 
-        about_title: "À propos de MRS Building Care",
+        about_title: "À propos de MRS Building",
         about_sub: "Entreprise familiale, travail sérieux, communication claire.",
         about_text:
-          "MRS Building Care est une entreprise familiale basée à Halle (Buizingen). Marcus Radu (CEO) et Florin Radu gèrent les chantiers avec un objectif simple : qualité, fiabilité et prix transparents. Petite réparation ou rénovation complète, vous avez un seul contact et un résultat propre.",
+          "MRS Building est une entreprise familiale basée à Halle (Buizingen). Marcus Radu (CEO) et Florin Radu gèrent les chantiers avec un objectif simple : qualité, fiabilité et prix transparents. Petite réparation ou rénovation complète, vous avez un seul contact et un résultat propre.",
         about_b1: "Rénovation de A à Z",
         about_b1t: "coordination complète du projet",
         about_b2: "Planning clair",
@@ -687,6 +793,18 @@
         why_3t: "pas de surprises",
         why_4: "Une équipe, un contact",
         why_4t: "communication simple",
+
+        projects_title: "Réalisations",
+        projects_sub: "Quelques exemples de notre travail. Les photos seront ajoutées bientôt.",
+        proj_ph_1: "PHOTO BIENTÔT",
+        proj_ph_2: "PHOTO BIENTÔT",
+        proj_ph_3: "PHOTO BIENTÔT",
+        proj_t1: "Toiture",
+        proj_m1: "Réparations & finitions — résultat propre.",
+        proj_t2: "Carrelage",
+        proj_m2: "Alignement précis, joints propres, finition durable.",
+        proj_t3: "Façade",
+        proj_m3: "Rénovation & réparations pour un extérieur net.",
 
         process_title: "Notre méthode",
         process_sub: "Des étapes simples, un chantier fluide.",
@@ -716,6 +834,7 @@
         nav_tagline: "Renovaties • Algemene aannemer • Halle (Buizingen)",
         nav_services: "Diensten",
         nav_about: "Over ons",
+        nav_projects: "Realisaties",
         nav_process: "Werkwijze",
         nav_contact: "Contact",
         nav_quote: "Offerte aanvragen",
@@ -723,7 +842,7 @@
         hero_kicker: "Familiebedrijf in Halle (Buizingen) • Betrouwbaar, nette afwerking",
         hero_title: "Jouw renovatiepartner — van A tot Z.",
         hero_lead:
-          "MRS Building Care is een familiebedrijf (algemene aannemer) geleid door Marcus Radu (CEO) samen met Florin Radu. We doen totaalrenovaties: dakwerken, elektriciteit, tegelwerken, pleister, gevelwerken en meer.",
+          "MRS Building is een familiebedrijf (algemene aannemer) geleid door Marcus Radu (CEO) samen met Florin Radu. We doen totaalrenovaties: dakwerken, elektriciteit, tegelwerken, pleister, gevelwerken en meer.",
         hero_btn_quote: "Gratis offerte",
         hero_btn_call: "Bel nu",
         hero_btn_email: "Mail voor offerte",
@@ -750,10 +869,10 @@
         s6_title: "Gevel (Façade)",
         s6_text: "Gevelrenovatie, herstellingen en afwerking — een frisse buitenkant.",
 
-        about_title: "Over MRS Building Care",
+        about_title: "Over MRS Building",
         about_sub: "Familiebedrijf, serieus werk, duidelijke communicatie.",
         about_text:
-          "MRS Building Care is een renovatiebedrijf uit Halle (Buizingen). Marcus Radu (CEO) en Florin Radu sturen projecten aan met focus op kwaliteit, betrouwbaarheid en transparante prijzen. Van kleine herstelling tot volledige renovatie: één aanspreekpunt en een proper resultaat.",
+          "MRS Building is een renovatiebedrijf uit Halle (Buizingen). Marcus Radu (CEO) en Florin Radu sturen projecten aan met focus op kwaliteit, betrouwbaarheid en transparante prijzen. Van kleine herstelling tot volledige renovatie: één aanspreekpunt en een proper resultaat.",
         about_b1: "Renovatie van A tot Z",
         about_b1t: "wij coördineren het volledige project",
         about_b2: "Duidelijke planning",
@@ -770,6 +889,18 @@
         why_3t: "geen verrassingen",
         why_4: "Eén team, één contact",
         why_4t: "eenvoudige communicatie",
+
+        projects_title: "Realisaties",
+        projects_sub: "Enkele voorbeelden van ons werk. Foto’s worden binnenkort toegevoegd.",
+        proj_ph_1: "FOTO BINNENKORT",
+        proj_ph_2: "FOTO BINNENKORT",
+        proj_ph_3: "FOTO BINNENKORT",
+        proj_t1: "Dakwerken",
+        proj_m1: "Herstellingen & afwerking — strak resultaat.",
+        proj_t2: "Tegelwerken",
+        proj_m2: "Strakke plaatsing, nette voegen, duurzame afwerking.",
+        proj_t3: "Gevel",
+        proj_m3: "Renovatie & herstellingen voor een frisse buitenkant.",
 
         process_title: "Werkwijze",
         process_sub: "Simpele stappen, vlot verloop.",
@@ -822,6 +953,18 @@
       if (waLabel && I18N?.[lang]?.waLabel) waLabel.textContent = I18N[lang].waLabel;
       if (waSub && I18N?.[lang]?.waSub) waSub.textContent = I18N[lang].waSub;
 
+      // Update WhatsApp prefilled message per language (optional)
+      const waBtn = document.querySelector(".whatsapp-float");
+      if (waBtn){
+        const messageByLang = {
+          en: "Hello MRS Building, I would like a quote.\n\nAddress:\nWork type:\nPreferred date:",
+          fr: "Bonjour MRS Building, je voudrais un devis.\n\nAdresse:\nType de travaux:\nDate souhaitée:",
+          nl: "Hallo MRS Building, ik wil graag een offerte.\n\nAdres:\nType werken:\nGewenste datum:"
+        };
+        const msg = messageByLang[lang] || messageByLang.en;
+        waBtn.href = "https://wa.me/32489202801?text=" + encodeURIComponent(msg);
+      }
+
       localStorage.setItem("mrs_lang", lang);
     }
 
@@ -829,6 +972,18 @@
     setLang(saved && I18N[saved] ? saved : "en");
 
     langButtons.forEach(btn => btn.addEventListener("click", () => setLang(btn.dataset.lang)));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener("click", (e)=>{
+        const href = a.getAttribute("href");
+        if(!href || href.length < 2) return;
+        const el = document.querySelector(href);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
   </script>
 </body>
 </html>
