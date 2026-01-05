@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MRS Building Care — Renovations & General Contractor (Halle / Buizingen)</title>
+  <meta name="description" content="MRS Building Care — Entreprise générale / Algemene aannemer / General contractor in Halle (Buizingen). Roofing, electricity, tiling, plastering, facade & more." />
+
+  <!-- Simple SVG favicon (inline) -->
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="14" fill="%2307111f"/>
+      <path d="M14 30 L32 16 L50 30 V50 H14 Z" fill="none" stroke="%237cdbff" stroke-width="3" stroke-linejoin="round"/>
+      <text x="32" y="44" text-anchor="middle" font-family="Arial" font-size="16" font-weight="800" fill="%23b7ffcf">MRS</text>
+    </svg>' />
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#101826;
+      --muted:#a9b4c4;
+      --text:#e9f0ff;
+      --brand:#7cdbff;
+      --brand2:#b7ffcf;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(124,219,255,.20), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(183,255,207,.16), transparent 60%),
+        radial-gradient(900px 500px at 40% 110%, rgba(124,219,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,15,23,.6);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+
+    /* LOGO (SVG) */
+    .logoWrap{
+      width:42px; height:42px;
+      border-radius:14px;
+      background: rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 10px 30px rgba(124,219,255,.12);
+      display:grid; place-items:center;
+      overflow:hidden;
+    }
+    .logoSvg{width:34px; height:34px}
+
+    .nav-links{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+    .nav-links a{
+      padding:8px 10px;
+      border-radius:12px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .nav-links a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.04)}
+    .right{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .lang{
+      display:flex; gap:6px; padding:6px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .lang button{
+      border:0; cursor:pointer;
+      padding:8px 10px;
+      border-radius:11px;
+      background:transparent;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .lang button.active{background:rgba(124,219,255,.14); color:var(--text)}
+    .cta{
+      padding:10px 14px;
+      border-radius:14px;
+      font-weight:800;
+      border:1px solid rgba(124,219,255,.35);
+      background: linear-gradient(135deg, rgba(124,219,255,.22), rgba(183,255,207,.12));
+      box-shadow: 0 14px 35px rgba(0,0,0,.25);
+    }
+    .cta:hover{transform: translateY(-1px)}
+    .hero{padding:56px 0 28px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+    .card{
+      background: rgba(16,24,38,.75);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{padding:22px}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+      font-weight:700;
+      font-size:13px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 4px rgba(124,219,255,.12);
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    .lead{color:var(--muted); font-size:16px; margin:0 0 16px}
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:800;
+    }
+    .btn.primary{
+      border-color: rgba(124,219,255,.35);
+      background: linear-gradient(135deg, rgba(124,219,255,.22), rgba(183,255,207,.12));
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .mini{
+      padding:18px;
+      display:grid; gap:12px;
+    }
+    .mini .tile{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      background: rgba(255,255,255,.02);
+    }
+    .tile strong{display:block; font-size:14px}
+    .tile span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
+    section{padding:18px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      margin:10px 0 12px;
+    }
+    .section-head h2{margin:0; font-size:22px; letter-spacing:-.3px}
+    .section-head p{margin:0; color:var(--muted); max-width:60ch}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    @media (max-width: 900px){ .grid3{grid-template-columns:1fr} }
+    .service{padding:16px}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-weight:800;
+      font-size:13px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      margin-bottom:10px;
+    }
+    .service p{margin:8px 0 0; color:var(--muted)}
+    .split{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+    }
+    @media (max-width: 900px){ .split{grid-template-columns:1fr} }
+    .list{
+      margin:0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .list li{
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color:var(--muted);
+    }
+    .list b{color:var(--text)}
+    .contact{
+      padding:18px;
+      display:grid; gap:12px;
+    }
+    .contact .row{display:flex; flex-wrap:wrap; gap:10px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:700;
+    }
+    .pill a{color:var(--text)}
+    .map{
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+    }
+    .map iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
+    }
+    footer{
+      padding:26px 0 36px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+    .small{font-size:13px}
+    .muted{color:var(--muted)}
+    .hr{height:1px; background:var(--line); margin:10px 0}
+
+    /* WhatsApp floating button */
+    .whatsapp-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(183,255,207,.35);
+      background: linear-gradient(135deg, rgba(183,255,207,.18), rgba(124,219,255,.10));
+      box-shadow: 0 18px 45px rgba(0,0,0,.40);
+      color: var(--text);
+      font-weight: 900;
+    }
+    .whatsapp-float:hover{ transform: translateY(-1px); }
+    .whatsapp-float .wa-ic{
+      width: 36px; height: 36px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .whatsapp-float .wa-txt{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .whatsapp-float .wa-txt span:first-child{ font-size: 13px; }
+    .whatsapp-float .wa-txt span:last-child{ font-size: 11px; color: var(--muted); font-weight: 800; }
+    @media (max-width: 520px){
+      .whatsapp-float{ padding: 12px; }
+      .whatsapp-float .wa-txt{ display:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="MRS Building Care">
+        <div class="logoWrap" aria-hidden="true">
+          <!-- Simple logo: house outline + MRS -->
+          <svg class="logoSvg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7cdbff"/>
+                <stop offset="1" stop-color="#b7ffcf"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="6" width="52" height="52" rx="16" fill="rgba(255,255,255,.02)" />
+            <path d="M14 30 L32 16 L50 30 V50 H14 Z"
+                  fill="none" stroke="url(#g)" stroke-width="3.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="32" y="44" text-anchor="middle"
+                  font-family="Arial, system-ui" font-size="14" font-weight="900"
+                  fill="#e9f0ff">MRS</text>
+          </svg>
+        </div>
+
+        <div>
+          <div style="font-size:14px; line-height:1.05;">MRS Building Care</div>
+          <div class="small muted" data-i18n="nav_tagline">Renovations • General Contractor • Halle (Buizingen)</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#process" data-i18n="nav_process">How we work</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="right">
+        <div class="lang" role="tablist" aria-label="Language selector">
+          <button class="active" data-lang="en" aria-selected="true">EN</button>
+          <button data-lang="fr" aria-selected="false">FR</button>
+          <button data-lang="nl" aria-selected="false">NL</button>
+        </div>
+        <a class="cta" href="#contact" data-i18n="nav_quote">Request a quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-card">
+          <div class="kicker"><span class="dot"></span> <span data-i18n="hero_kicker">Family business in Halle (Buizingen) • Reliable, clean finishes</span></div>
+
+          <h1 data-i18n="hero_title">Your one-stop team for renovations — from A to Z.</h1>
+          <p class="lead" data-i18n="hero_lead">
+            MRS Building Care is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu.
+            We handle complete renovation projects: roofing, electrical work, tiling, plastering, facade work and more.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact" data-i18n="hero_btn_quote">Get a free quote</a>
+            <a class="btn" href="tel:+32489202801" aria-label="Call">
+              <span>📞</span> <span data-i18n="hero_btn_call">Call now</span>
+            </a>
+            <a class="btn" href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care" aria-label="Email">
+              <span>✉️</span> <span data-i18n="hero_btn_email">Email for a quote</span>
+            </a>
+          </div>
+
+          <div class="hr"></div>
+          <div class="small muted" data-i18n="hero_note">
+            Quick response • Transparent pricing • Respect for deadlines • Clean worksite
+          </div>
+        </div>
+
+        <aside class="card mini">
+          <div class="tile">
+            <strong data-i18n="mini_location_title">Address</strong>
+            <span data-i18n="mini_location_text">Beerselsestraat 3, 1501 Buizingen (Halle), Belgium</span>
+          </div>
+          <div class="tile">
+            <strong data-i18n="mini_specialty_title">Specialty</strong>
+            <span data-i18n="mini_specialty_text">Complete renovations, small fixes & full projects</span>
+          </div>
+          <div class="tile">
+            <strong data-i18n="mini_contact_title">Direct contact</strong>
+            <span><a href="tel:+32489202801">0489 20 28 01</a> • <a href="mailto:sebimarcus06@gmail.com">sebimarcus06@gmail.com</a></span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="services_title">Services</h2>
+          <p data-i18n="services_sub">Everything you need for a renovation — coordinated by one team.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card service">
+          <div class="badge">🏠 <span data-i18n="s1_title">Roofing (Toiture)</span></div>
+          <p data-i18n="s1_text">Repairs, upgrades, finishing details — clean and durable work.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">⚡ <span data-i18n="s2_title">Electricity</span></div>
+          <p data-i18n="s2_text">Installations, upgrades, lighting, sockets, troubleshooting — compliance-ready work.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">🧱 <span data-i18n="s3_title">Tiling (Carrelage)</span></div>
+          <p data-i18n="s3_text">Bathrooms, kitchens, floors & walls — precise alignment and clean joints.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">🪵 <span data-i18n="s4_title">Joinery / Woodwork</span></div>
+          <p data-i18n="s4_text">Doors, frames, small custom work — solid details that finish the space.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">🧰 <span data-i18n="s5_title">Plaster (Plâtre)</span></div>
+          <p data-i18n="s5_text">Smooth walls, repairs, preparation — ready for paint and final finishing.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">🏢 <span data-i18n="s6_title">Facade (Façade)</span></div>
+          <p data-i18n="s6_text">Facade renovation, repairs & finishing — a clean exterior look.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="about_title">About MRS Building Care</h2>
+          <p data-i18n="about_sub">Family business, serious work, clean communication.</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="card" style="padding:18px;">
+          <p class="muted" style="margin:0" data-i18n="about_text">
+            MRS Building Care is a family-owned renovation company based in Halle (Buizingen).
+            CEO Marcus Radu and Florin Radu manage projects with a focus on quality, reliability, and transparent pricing.
+            Whether it’s a small repair or a complete renovation, you get one point of contact and a result that looks right.
+          </p>
+          <div class="hr"></div>
+          <ul class="list">
+            <li><b data-i18n="about_b1">A to Z renovations</b> — <span data-i18n="about_b1t">we coordinate the full project</span></li>
+            <li><b data-i18n="about_b2">Clear planning</b> — <span data-i18n="about_b2t">deadlines and steps explained</span></li>
+            <li><b data-i18n="about_b3">Clean worksite</b> — <span data-i18n="about_b3t">respect for your home</span></li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <div class="badge">✅ <span data-i18n="why_title">Why clients choose us</span></div>
+          <ul class="list">
+            <li><b data-i18n="why_1">Fast response</b> — <span data-i18n="why_1t">quotes and planning without delays</span></li>
+            <li><b data-i18n="why_2">Quality finishes</b> — <span data-i18n="why_2t">straight lines, clean details</span></li>
+            <li><b data-i18n="why_3">Fair, transparent pricing</b> — <span data-i18n="why_3t">no surprises</span></li>
+            <li><b data-i18n="why_4">One team, one contact</b> — <span data-i18n="why_4t">simple communication</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="process_title">How we work</h2>
+          <p data-i18n="process_sub">Simple steps, smooth projects.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card service">
+          <div class="badge">1️⃣ <span data-i18n="p1_title">Contact</span></div>
+          <p data-i18n="p1_text">Tell us what you need. Photos help, but not required.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">2️⃣ <span data-i18n="p2_title">Visit & quote</span></div>
+          <p data-i18n="p2_text">We check the situation and provide a clear quote.</p>
+        </div>
+        <div class="card service">
+          <div class="badge">3️⃣ <span data-i18n="p3_title">Renovation</span></div>
+          <p data-i18n="p3_text">We deliver clean work, respect the deadline, and keep you updated.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="contact_title">Contact</h2>
+          <p data-i18n="contact_sub">Request a quote (devis / offerte) — we reply fast.</p>
+        </div>
+      </div>
+
+      <div class="card contact">
+        <div class="row">
+          <div class="pill">📍 <span data-i18n="contact_addr">Beerselsestraat 3, 1501 Buizingen (Halle), Belgium</span></div>
+          <div class="pill">📞 <a href="tel:+32489202801">0489 20 28 01</a></div>
+          <div class="pill">✉️ <a href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care">sebimarcus06@gmail.com</a></div>
+          <div class="pill">🗺️ <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=Beerselsestraat%203%201501%20Buizingen">Open in Maps</a></div>
+        </div>
+
+        <div class="map" aria-label="Map">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Beerselsestraat%203%201501%20Buizingen&output=embed">
+          </iframe>
+        </div>
+
+        <div class="row" style="gap:12px;">
+          <a class="btn primary"
+             href="mailto:sebimarcus06@gmail.com?subject=Quote%20request%20-%20MRS%20Building%20Care&body=Hello%20MRS%20Building%20Care,%0A%0AI%20would%20like%20a%20quote%20for:%0A-%20Type%20of%20work:%20%0A-%20Address:%20%0A-%20Preferred%20date:%20%0A-%20Photos%20(optional):%20%0A%0AThank%20you!"
+             data-i18n="contact_btn_quote">Request a quote by email</a>
+
+          <a class="btn" href="tel:+32489202801" data-i18n="contact_btn_call">Call us</a>
+        </div>
+
+        <div class="small muted" data-i18n="contact_note">
+          Tip: For a faster quote, include the address, a short description, and a few photos.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+          <div>
+            <div style="font-weight:900;">MRS Building Care</div>
+            <div class="small" data-i18n="footer_line">
+              General contractor • Renovations • Halle (Buizingen)
+            </div>
+            <div class="small muted" data-i18n="footer_addr">
+              Beerselsestraat 3, 1501 Buizingen (Halle), Belgium
+            </div>
+          </div>
+          <div class="small">
+            <div><span class="muted">Email:</span> <a href="mailto:sebimarcus06@gmail.com">sebimarcus06@gmail.com</a></div>
+            <div><span class="muted">Phone:</span> <a href="tel:+32489202801">0489 20 28 01</a></div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="small muted">© <span id="year"></span> MRS Building Care. <span data-i18n="footer_rights">All rights reserved.</span></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-float"
+     href="https://wa.me/32489202801?text=Hello%20MRS%20Building%20Care,%20I%20would%20like%20a%20quote.%0A%0AAddress:%20%0AWork%20type:%20%0APreferred%20date:%20"
+     target="_blank" rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <span class="wa-ic" aria-hidden="true">💬</span>
+    <span class="wa-txt">
+      <span id="waLabel">WhatsApp</span>
+      <span id="waSub">Fast quote</span>
+    </span>
+  </a>
+
+  <script>
+    const I18N = {
+      en: {
+        nav_tagline: "Renovations • General Contractor • Halle (Buizingen)",
+        nav_services: "Services",
+        nav_about: "About",
+        nav_process: "How we work",
+        nav_contact: "Contact",
+        nav_quote: "Request a quote",
+
+        hero_kicker: "Family business in Halle (Buizingen) • Reliable, clean finishes",
+        hero_title: "Your one-stop team for renovations — from A to Z.",
+        hero_lead:
+          "MRS Building Care is a family-owned general contractor led by Marcus Radu (CEO) with Florin Radu. We handle complete renovation projects: roofing, electrical work, tiling, plastering, facade work and more.",
+        hero_btn_quote: "Get a free quote",
+        hero_btn_call: "Call now",
+        hero_btn_email: "Email for a quote",
+        hero_note: "Quick response • Transparent pricing • Respect for deadlines • Clean worksite",
+
+        mini_location_title: "Address",
+        mini_location_text: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgium",
+        mini_specialty_title: "Specialty",
+        mini_specialty_text: "Complete renovations, small fixes & full projects",
+        mini_contact_title: "Direct contact",
+
+        services_title: "Services",
+        services_sub: "Everything you need for a renovation — coordinated by one team.",
+        s1_title: "Roofing (Toiture)",
+        s1_text: "Repairs, upgrades, finishing details — clean and durable work.",
+        s2_title: "Electricity",
+        s2_text: "Installations, upgrades, lighting, sockets, troubleshooting — compliance-ready work.",
+        s3_title: "Tiling (Carrelage)",
+        s3_text: "Bathrooms, kitchens, floors & walls — precise alignment and clean joints.",
+        s4_title: "Joinery / Woodwork",
+        s4_text: "Doors, frames, small custom work — solid details that finish the space.",
+        s5_title: "Plaster (Plâtre)",
+        s5_text: "Smooth walls, repairs, preparation — ready for paint and final finishing.",
+        s6_title: "Facade (Façade)",
+        s6_text: "Facade renovation, repairs & finishing — a clean exterior look.",
+
+        about_title: "About MRS Building Care",
+        about_sub: "Family business, serious work, clean communication.",
+        about_text:
+          "MRS Building Care is a family-owned renovation company based in Halle (Buizingen). CEO Marcus Radu and Florin Radu manage projects with a focus on quality, reliability, and transparent pricing. Whether it’s a small repair or a complete renovation, you get one point of contact and a result that looks right.",
+        about_b1: "A to Z renovations",
+        about_b1t: "we coordinate the full project",
+        about_b2: "Clear planning",
+        about_b2t: "deadlines and steps explained",
+        about_b3: "Clean worksite",
+        about_b3t: "respect for your home",
+
+        why_title: "Why clients choose us",
+        why_1: "Fast response",
+        why_1t: "quotes and planning without delays",
+        why_2: "Quality finishes",
+        why_2t: "straight lines, clean details",
+        why_3: "Fair, transparent pricing",
+        why_3t: "no surprises",
+        why_4: "One team, one contact",
+        why_4t: "simple communication",
+
+        process_title: "How we work",
+        process_sub: "Simple steps, smooth projects.",
+        p1_title: "Contact",
+        p1_text: "Tell us what you need. Photos help, but not required.",
+        p2_title: "Visit & quote",
+        p2_text: "We check the situation and provide a clear quote.",
+        p3_title: "Renovation",
+        p3_text: "We deliver clean work, respect the deadline, and keep you updated.",
+
+        contact_title: "Contact",
+        contact_sub: "Request a quote (devis / offerte) — we reply fast.",
+        contact_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgium",
+        contact_btn_quote: "Request a quote by email",
+        contact_btn_call: "Call us",
+        contact_note: "Tip: For a faster quote, include the address, a short description, and a few photos.",
+
+        footer_line: "General contractor • Renovations • Halle (Buizingen)",
+        footer_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgium",
+        footer_rights: "All rights reserved.",
+
+        waLabel: "WhatsApp",
+        waSub: "Fast quote"
+      },
+
+      fr: {
+        nav_tagline: "Rénovations • Entreprise générale • Halle (Buizingen)",
+        nav_services: "Services",
+        nav_about: "À propos",
+        nav_process: "Méthode",
+        nav_contact: "Contact",
+        nav_quote: "Demander un devis",
+
+        hero_kicker: "Entreprise familiale à Halle (Buizingen) • Finitions propres et fiables",
+        hero_title: "Votre équipe rénovation — de A à Z.",
+        hero_lead:
+          "MRS Building Care est une entreprise familiale (entreprise générale) dirigée par Marcus Radu (CEO) avec Florin Radu. Nous réalisons des rénovations complètes : toiture, électricité, carrelage, plâtre, façade et plus.",
+        hero_btn_quote: "Devis gratuit",
+        hero_btn_call: "Appeler",
+        hero_btn_email: "Email pour devis",
+        hero_note: "Réponse rapide • Prix transparents • Délais respectés • Chantier propre",
+
+        mini_location_title: "Adresse",
+        mini_location_text: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgique",
+        mini_specialty_title: "Spécialité",
+        mini_specialty_text: "Rénovations complètes, petites réparations & projets complets",
+        mini_contact_title: "Contact direct",
+
+        services_title: "Services",
+        services_sub: "Tout ce qu’il faut pour une rénovation — coordonné par une seule équipe.",
+        s1_title: "Toiture",
+        s1_text: "Réparations, améliorations, finitions — travail propre et durable.",
+        s2_title: "Électricité",
+        s2_text: "Installations, mises à niveau, éclairage, prises, dépannage — travail conforme.",
+        s3_title: "Carrelage",
+        s3_text: "Salles de bain, cuisines, sols & murs — alignement précis et joints propres.",
+        s4_title: "Menuiserie",
+        s4_text: "Portes, encadrements, petites réalisations — des détails solides qui finissent l’espace.",
+        s5_title: "Plâtre",
+        s5_text: "Murs lisses, réparations, préparation — prêt pour peinture et finitions.",
+        s6_title: "Façade",
+        s6_text: "Rénovation, réparations et finitions — un extérieur net.",
+
+        about_title: "À propos de MRS Building Care",
+        about_sub: "Entreprise familiale, travail sérieux, communication claire.",
+        about_text:
+          "MRS Building Care est une entreprise familiale basée à Halle (Buizingen). Marcus Radu (CEO) et Florin Radu gèrent les chantiers avec un objectif simple : qualité, fiabilité et prix transparents. Petite réparation ou rénovation complète, vous avez un seul contact et un résultat propre.",
+        about_b1: "Rénovation de A à Z",
+        about_b1t: "coordination complète du projet",
+        about_b2: "Planning clair",
+        about_b2t: "étapes et délais expliqués",
+        about_b3: "Chantier propre",
+        about_b3t: "respect de votre logement",
+
+        why_title: "Pourquoi nous choisir",
+        why_1: "Réponse rapide",
+        why_1t: "devis et planning sans attendre",
+        why_2: "Finitions de qualité",
+        why_2t: "détails nets, travail propre",
+        why_3: "Prix transparents",
+        why_3t: "pas de surprises",
+        why_4: "Une équipe, un contact",
+        why_4t: "communication simple",
+
+        process_title: "Notre méthode",
+        process_sub: "Des étapes simples, un chantier fluide.",
+        p1_title: "Contact",
+        p1_text: "Expliquez votre besoin. Des photos aident, mais ce n’est pas obligatoire.",
+        p2_title: "Visite & devis",
+        p2_text: "On vérifie la situation et on vous remet un devis clair.",
+        p3_title: "Rénovation",
+        p3_text: "Travail propre, délais respectés, suivi régulier.",
+
+        contact_title: "Contact",
+        contact_sub: "Demandez un devis — réponse rapide.",
+        contact_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgique",
+        contact_btn_quote: "Demander un devis par email",
+        contact_btn_call: "Nous appeler",
+        contact_note: "Conseil : pour un devis rapide, indiquez l’adresse, une courte description et quelques photos.",
+
+        footer_line: "Entreprise générale • Rénovations • Halle (Buizingen)",
+        footer_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), Belgique",
+        footer_rights: "Tous droits réservés.",
+
+        waLabel: "WhatsApp",
+        waSub: "Devis rapide"
+      },
+
+      nl: {
+        nav_tagline: "Renovaties • Algemene aannemer • Halle (Buizingen)",
+        nav_services: "Diensten",
+        nav_about: "Over ons",
+        nav_process: "Werkwijze",
+        nav_contact: "Contact",
+        nav_quote: "Offerte aanvragen",
+
+        hero_kicker: "Familiebedrijf in Halle (Buizingen) • Betrouwbaar, nette afwerking",
+        hero_title: "Jouw renovatiepartner — van A tot Z.",
+        hero_lead:
+          "MRS Building Care is een familiebedrijf (algemene aannemer) geleid door Marcus Radu (CEO) samen met Florin Radu. We doen totaalrenovaties: dakwerken, elektriciteit, tegelwerken, pleister, gevelwerken en meer.",
+        hero_btn_quote: "Gratis offerte",
+        hero_btn_call: "Bel nu",
+        hero_btn_email: "Mail voor offerte",
+        hero_note: "Snelle reactie • Transparante prijzen • Deadlines respecteren • Propere werf",
+
+        mini_location_title: "Adres",
+        mini_location_text: "Beerselsestraat 3, 1501 Buizingen (Halle), België",
+        mini_specialty_title: "Specialiteit",
+        mini_specialty_text: "Totaalrenovaties, kleine herstellingen & volledige projecten",
+        mini_contact_title: "Rechtstreeks contact",
+
+        services_title: "Diensten",
+        services_sub: "Alles voor jouw renovatie — gecoördineerd door één team.",
+        s1_title: "Dakwerken (Toiture)",
+        s1_text: "Herstellingen, upgrades, afwerking — netjes en duurzaam uitgevoerd.",
+        s2_title: "Elektriciteit",
+        s2_text: "Installaties, upgrades, verlichting, stopcontacten, storingen — conform uitgevoerd.",
+        s3_title: "Tegelwerken (Carrelage)",
+        s3_text: "Badkamer, keuken, vloeren & wanden — strak geplaatst met nette voegen.",
+        s4_title: "Timmerwerken / Schrijnwerk",
+        s4_text: "Deuren, kaders, kleine maatwerken — details die het afmaken.",
+        s5_title: "Pleister (Plâtre)",
+        s5_text: "Strakke muren, herstellingen, voorbereiding — klaar voor schilderen en afwerking.",
+        s6_title: "Gevel (Façade)",
+        s6_text: "Gevelrenovatie, herstellingen en afwerking — een frisse buitenkant.",
+
+        about_title: "Over MRS Building Care",
+        about_sub: "Familiebedrijf, serieus werk, duidelijke communicatie.",
+        about_text:
+          "MRS Building Care is een renovatiebedrijf uit Halle (Buizingen). Marcus Radu (CEO) en Florin Radu sturen projecten aan met focus op kwaliteit, betrouwbaarheid en transparante prijzen. Van kleine herstelling tot volledige renovatie: één aanspreekpunt en een proper resultaat.",
+        about_b1: "Renovatie van A tot Z",
+        about_b1t: "wij coördineren het volledige project",
+        about_b2: "Duidelijke planning",
+        about_b2t: "stappen en timing helder",
+        about_b3: "Propere werf",
+        about_b3t: "respect voor jouw woning",
+
+        why_title: "Waarom klanten ons kiezen",
+        why_1: "Snelle reactie",
+        why_1t: "offertes en planning zonder vertraging",
+        why_2: "Kwaliteitsafwerking",
+        why_2t: "strakke lijnen, nette details",
+        why_3: "Eerlijke, transparante prijs",
+        why_3t: "geen verrassingen",
+        why_4: "Eén team, één contact",
+        why_4t: "eenvoudige communicatie",
+
+        process_title: "Werkwijze",
+        process_sub: "Simpele stappen, vlot verloop.",
+        p1_title: "Contact",
+        p1_text: "Vertel wat je nodig hebt. Foto’s helpen, maar zijn niet verplicht.",
+        p2_title: "Bezoek & offerte",
+        p2_text: "We bekijken alles en geven een duidelijke offerte.",
+        p3_title: "Renovatie",
+        p3_text: "Nette uitvoering, deadlines respecteren en updates tijdens het werk.",
+
+        contact_title: "Contact",
+        contact_sub: "Offerte aanvragen — we reageren snel.",
+        contact_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), België",
+        contact_btn_quote: "Offerte aanvragen via mail",
+        contact_btn_call: "Bel ons",
+        contact_note: "Tip: voor een snellere offerte: adres, korte beschrijving en enkele foto’s.",
+
+        footer_line: "Algemene aannemer • Renovaties • Halle (Buizingen)",
+        footer_addr: "Beerselsestraat 3, 1501 Buizingen (Halle), België",
+        footer_rights: "Alle rechten voorbehouden.",
+
+        waLabel: "WhatsApp",
+        waSub: "Snelle offerte"
+      }
+    };
+
+    const langButtons = document.querySelectorAll(".lang button");
+    const translatable = document.querySelectorAll("[data-i18n]");
+    const yearEl = document.getElementById("year");
+    yearEl.textContent = new Date().getFullYear();
+
+    function setLang(lang){
+      langButtons.forEach(btn => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      document.documentElement.lang = lang;
+
+      translatable.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const value = I18N?.[lang]?.[key];
+        if (typeof value === "string") el.textContent = value;
+      });
+
+      // Update WhatsApp label/subtitle to match language
+      const waLabel = document.getElementById("waLabel");
+      const waSub = document.getElementById("waSub");
+      if (waLabel && I18N?.[lang]?.waLabel) waLabel.textContent = I18N[lang].waLabel;
+      if (waSub && I18N?.[lang]?.waSub) waSub.textContent = I18N[lang].waSub;
+
+      localStorage.setItem("mrs_lang", lang);
+    }
+
+    const saved = localStorage.getItem("mrs_lang");
+    setLang(saved && I18N[saved] ? saved : "en");
+
+    langButtons.forEach(btn => btn.addEventListener("click", () => setLang(btn.dataset.lang)));
+  </script>
+</body>
+</html>
